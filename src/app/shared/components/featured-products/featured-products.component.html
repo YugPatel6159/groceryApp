@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="container exp-cat">
+    <h3>Featured Products</h3>
+    <div class="categories">
+      <span class="categories">
+        <a href="#" class="space">All</a>
+        <a href="#" class="space">Vegetables</a>
+        <a href="#" class="space">Fruits</a>
+        <a href="#" class="space">Coffe & teas</a>
+        <a href="#" class="space">Meat</a>
+      </span>
+    </div>
+  </div>
+  <div class="container swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide cat-card" *ngFor="let i of product">
+        <a [routerLink]="['/product-details', i.title, i.id]">
+          <img [src]= 'showImage(i.avatar_image)' width="120" height="120" alt=" " />
+        </a>
+        <h6 class="grocery-name">{{ i.title || "" }}</h6>
+        <div class="content">
+          <span class="green mt-3"
+            >{{ i?.amount - i?.discount_amount | currency : "INR" || "" }} &nbsp;<span
+              class="original-price"
+              [style.text-decoration]="
+                i.discount_amount ? 'line-through' : 'none'
+              "
+            >
+              {{ i.amount | currency : "INR" || "" }}
+            </span></span
+          >
+          <span class="d-flex justify-content-center mt-3">
+              <a class="btn" (click)="onAdd(i)"
+              ><i class="fas fa-cart-arrow-down"></i>Add</a
+              >
+            </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <app-product-card [categories]="products"></app-product-card> -->

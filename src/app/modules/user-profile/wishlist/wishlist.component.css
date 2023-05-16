@@ -1,0 +1,38 @@
+.card{
+    width: 14rem ;
+    height: 300px;
+    transition: 0.3s ease-in-out;
+}
+.btn{
+    background-color: rgb(136, 245, 136);
+}
+.green{
+    color:#3BB77E;
+}
+.decoration{
+    text-decoration: line-through;
+}
+/* .container{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    row-gap: 50px;
+    column-gap: 10px;
+    flex-direction: column;
+    align-items: center;
+} */
+.card{
+    /* width: 14rem ;
+    height: 330px; */
+    transition: 0.3s ease-in-out;
+}
+.card:hover{
+    transition:  0.3s ease-in-out;
+    transform: scale(1.1);
+}
+.content{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

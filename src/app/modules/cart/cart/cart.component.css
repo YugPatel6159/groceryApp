@@ -1,0 +1,98 @@
+.category-header{
+    text-align: center;
+    justify-content: center;
+    background-image:url("../../../../assets/Rectangle 1.png");
+    padding: 80px;
+    margin-top: 20px;
+}   
+/* .row{
+    background-color: black;
+    color: white;
+    margin-top: 3rem;
+}
+.background{
+    background-color: bisque;
+}
+small{
+    font-size: x-small;
+} */
+/* 
+   
+    .quantity{
+        margin-left: 10px;
+    }
+    .color{
+        color: rgb(170, 163, 163);
+    }   
+    .product-name{
+        justify-content: space-between;
+    }
+    .name{
+        justify-content: center;
+    } */
+    /* .container{
+        margin-left: 150px;
+        justify-content:flex-start;
+    } */
+    /* .backColor{
+        background-color: rgb(170, 163, 163);
+    }
+    .img{
+        width: 150px;
+        height: 100px;
+    } */
+
+    /* .width{
+        width:180px;
+        height:100px;
+    } */
+    /* .checkout{
+        margin-left: 100px;
+    }
+    .btn{
+        border-radius: 40px;
+        height: 50px;
+        width: 387px;
+        margin-right: 75px;
+    } */
+    /* .btn{
+        border-radius: 40px;
+        height: 50px;
+        width: 387px;
+        margin-right: 75px;
+    } */
+    .products{
+        display: flex;
+        flex-direction: column;
+    }
+    .quantity{
+        margin-left: 10px;
+        /* background-color: white; */
+
+    }
+    .number{
+        width:40px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .checkout{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .size{
+        font-size: 1.5rem;
+    }
+    .btn{
+        border-radius: 40px;
+        height: 45px;
+        width: 300px;
+        margin-right: -30px;
+        margin-top: 20px;
+        background-color: #53B175;
+        
+    }
+    .box{
+        margin-top: 50px;
+        margin-right: 250px;
+    }

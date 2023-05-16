@@ -1,0 +1,68 @@
+<div class="container trend-exp">
+    <div>
+        <span>
+            <h3>Top Sells</h3><br>
+            <hr class="hr-width">
+        </span>
+        <div class="trend-card" *ngFor="let category of products">
+            <div>
+               <a [routerLink]="['top-sells',category.category]"> <img src="../../assets/image 3.png" alt=""></a>
+            </div>
+            <div>
+                <h6>Orange</h6>
+                <h6>1kg</h6>
+                <span>$2<span class ="line-through">$3.99</span></span>
+            </div>
+        </div>
+    </div>    
+    <div class="trend-margin">
+        <span class="hr-width">
+            <h3>Top Rated</h3><br>
+            <hr class="hr-width">
+        </span>
+        <div class="trend-card" *ngFor="let category of products">
+            <div>
+                <a [routerLink]="['trending-items',category.category]"><img src="../../assets/image 3.png" alt=""></a>
+            </div>
+            <div>
+                <h6>Orange</h6>
+                <h6>1kg</h6>
+                <span>$2<span class ="line-through">$3.99</span></span>
+            </div>
+        </div>
+    </div>
+    <div class="trend-margin">
+        <span class="hr-width">
+            <h3>Trending Items</h3><br>
+            <hr class="hr-width">
+        </span>
+        <div class="trend-card" *ngFor="let category of products">
+            <div>
+                <a [routerLink]="['trending-items',category.category]"><img src="../../assets/image 3.png" alt=""></a>
+            </div>
+            <div>
+                <h6>Orange</h6>
+                <h6>1kg</h6>
+                <span>$2<span class ="line-through">$3.99</span></span>
+            </div>
+        </div>
+    </div>
+    <div class="trend-margin">
+        <span class="hr-width">
+            <h3>Recently Added</h3><br>
+            <hr class="hr-width">
+        </span>
+        <div class="trend-card" *ngFor="let category of products">
+            <div>
+                <a [routerLink]="['recently-added',category.category]"><img src="../../assets/image 3.png" alt=""></a>
+            </div>
+            <div>
+                <h6>Orange</h6>
+                <h6>1kg</h6>
+                <span>$2<span class ="line-through">$3.99</span></span>
+            </div>
+        </div>
+    </div>
+</div>
+    
+

@@ -1,0 +1,48 @@
+{
+  "cart": [
+    {
+      "id": 1,
+      "grocery_name": "Bananas",
+      "store": "ABC Supermarket",
+      "price": 0.49,
+      "discountPrice": null,
+      "rating": 4.2,
+      "quantity": "1 lb",
+      "category": "Fruits",
+      "imageUrl": "../../assets/Rectangle 19.png"
+    },
+    {
+      "id": 7,
+      "grocery_name": "Oranges",
+      "store": "ABC Supermarket",
+      "price": 0.99,
+      "discountPrice": 0.79,
+      "rating": 4,
+      "quantity": "1 lb",
+      "category": "Fruits",
+      "imageUrl": "../../assets/Rectangle 19.png"
+    },
+    {
+      "id": 6,
+      "grocery_name": "Cucumbers",
+      "store": "123 Market",
+      "price": 1.49,
+      "discountPrice": null,
+      "rating": 3.8,
+      "quantity": "1 lb",
+      "category": "Vegetables",
+      "imageUrl": "../../assets/Rectangle 19.png"
+    },
+    {
+      "id": 2,
+      "grocery_name": "Chicken Breast",
+      "store": "XYZ Grocery",
+      "price": 5.99,
+      "discountPrice": 4.99,
+      "rating": 4.5,
+      "quantity": "1 lb",
+      "category": "Meat",
+      "imageUrl": "../../assets/Rectangle 19.png"
+    }
+  ]
+}

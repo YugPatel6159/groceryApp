@@ -1,0 +1,82 @@
+.category-header{
+    text-align: center;
+    justify-content: center;
+    background-image:url("../../../../../assets/Rectangle 1.png");
+
+    padding: 80px;
+    margin-top: 20px;
+}
+.green{
+    color:#3BB77E;
+}
+.decoration{
+    text-decoration: line-through;
+}
+.container{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    row-gap: 50px;
+    column-gap: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+.btn{
+    background-color: rgb(136, 245, 136);
+}
+.content{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card{
+    width: 14rem ;
+    height: 330px;
+    transition: 0.3s ease-in-out;
+}
+.card:hover{
+    transition:  0.3s ease-in-out;
+    transform: scale(1.1);
+}
+.small{
+    align-items: center;
+}
+.filter{
+    text-align: right;
+    font-size: 30px;
+    padding: 20px;
+    position: relative;
+}
+.options{
+    width: 200px;
+    background-color: #F2F3F2;
+    padding: 10px;
+    position: absolute;
+    bottom: -185px;
+    right: 54px;
+  display: none;
+  border-radius: 10px;
+  z-index: 5;
+  }
+  .option{
+    font-size: 12px;
+    text-align: left;
+  }
+  ul,p{
+    margin: 0;
+    padding: 0;
+  
+  }
+  li{
+    list-style-type: none;
+  }
+  
+  input[type=checkbox]{
+    margin-right: 5px;
+  }
+  .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }

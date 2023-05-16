@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="container row mt-5 ms-3" *ngIf="LikedProducts.length>0">
+        <div class="card d-flex col-md-3 ms-5 mb-5" *ngFor="let i of LikedProducts">
+          <img
+            class="card-img-top"
+            [src]="showImage(i.avatar_image)"
+            width="120"
+            height="150"
+            alt="Card image cap"
+            (click)="routeToProductDetails(i.title, i.id)"
+          />
+          <div class="card-body">
+            <h5 class="grocery-name">{{ i.title }}</h5>
+            <span>☆☆☆☆☆(4)</span>
+            <div class="content">
+              <span >{{i?.amount - i?.discount_amount | currency: 'INR'}} &nbsp;<span class="original-price"
+                      [style.text-decoration]="i.discount_amount ? 'line-through' : 'none'">
+              {{ i.amount| currency: 'INR' }}
+              </span></span>
+              <i class="fas fa-trash" (click)="deleteProduct(i.id)"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div *ngIf="!LikedProducts.length">
+            <!-- <div class="w-100 d-flex justify-content-center align-items-center "> -->
+                <h2>No Products in Wish List</h2>
+            <!-- </div> -->
+        </div>
+      </div>
+</div>
+    

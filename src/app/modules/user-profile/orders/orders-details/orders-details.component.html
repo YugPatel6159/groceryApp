@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Order Details</h3>
+        <table class="table table-dark table-hover">
+          <thead>
+            <tr>
+              <th>Order Date</th>
+              <th>Est. Delivery Date</th>
+              <th>Special Note</th>
+              <th>Payment Status</th>
+              <th>Order Status</th>
+              <th>Total Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{orderDetail?.data?.order_date || ''}}</td>
+              <td>{{orderDetail?.data?.estimate_delivery_date || ''}}</td>
+              <td>{{orderDetail?.data?.special_note || ''}}</td>
+              <td>{{orderDetail?.data?.payment_status_masters || ''}}</td>
+              <td>{{orderDetail?.data?.order_status || ''}}</td>
+              <td>{{orderDetail?.data?.total_amount || ''}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Order Items</h3>
+        <table class="table table-light table-hover">
+          <thead>
+            <tr>
+              <th>Product Name</th>
+              <th>Quantity</th>
+              <th>Product Amount</th>
+              <th>Discount Type</th>
+              <th>Discount Amount</th>
+              <th>Subtotal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of orderDetail?.data?.order_items">
+              <td>{{item?.product_name || ''}}</td>
+              <td>{{item?.qty || ''}}</td>
+              <td>{{item?.product_amount || ''}}</td>
+              <td>{{item?.discount_type === 1 ? 'Percentage' : 'Flat' || ''}}</td>
+              <td>{{item?.product_amount<100 ? 0 : item.discount_amount || '' }}</td>
+              <td>{{ item?.product_amount*item?.qty>100 ? (item?.product_amount - item?.discount_amount)*item?.qty :item.product_amount*item.qty || '' }}</td>
+            </tr>
+          </tbody>  
+        </table>
+      </div>
+    </div>
+  </div>

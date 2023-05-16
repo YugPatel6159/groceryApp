@@ -1,0 +1,54 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.company{
+    display: flex;
+    justify-content:space-evenly;
+}
+li{
+    list-style: none;
+    list-style-type: none;
+    margin-top: 10px;
+}
+.green-color{
+    color: #3BB77E;
+}
+.footer-2{
+    display: flex;
+    justify-content: space-between;
+}
+.footer-logo{
+    font-size:xx-large;
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+}
+.footer-1{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.tag {
+    display: flex;
+    margin-left: 10px;
+
+}
+.refund{
+    display: flex;
+    margin-left: 10px;
+
+}
+.truck{
+    display: flex;
+    
+}
+.box-width{
+    width: 10px;
+    color: silver;
+}
+.margin-low{
+    margin-left: 10px;
+}

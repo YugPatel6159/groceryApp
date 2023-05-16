@@ -1,0 +1,50 @@
+.exp-cat{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+.space{
+    margin-left: 10px;
+    color: black;
+}
+
+.headings{
+    display: flex;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+    margin: 0px;
+    color: black;
+}
+.cat-card{
+margin-left: 25PX;
+height: 280px !important;
+border: 1px solid gray;
+width: 228px !important;
+text-align: center;
+cursor: pointer;
+}
+.Items-container{
+    display: flex;
+    flex-direction: row;
+}
+.line-through{
+    text-decoration: line-through;
+}
+.btn{
+    background-color:#3BB77E;
+    width: 50%;
+    align-items: center;
+    text-align: center;
+}
+.grocery-name{
+    margin-top: 15px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

@@ -1,0 +1,67 @@
+<div class="category-header">
+  <h2>{{ urlCategory }}</h2>
+</div>
+<div class="filter">
+  <div class="icon">
+    <i class="fa-solid fa-filter filter" (click)="display()"></i>
+  </div>
+  <div class="options" [style.display]="filterToggle ? 'block' : 'none'">
+    <p style="text-align: center">Filter Option</p>
+    <div class="option">
+      <ul>
+        <p style="font-size: 16px">Category</p>
+        <li *ngFor="let i of uniqueItems">
+          <input
+            type="checkbox"
+            #brand
+            name="Category"
+            id="{{ i.title }}"
+            value="{{ i.title }}"
+            (change)="onChangeCategory($event)"
+          />{{ i.title }}
+        </li>
+        <P style="font-size: 16px">Price</P>
+        <li *ngFor="let i of priceRange">
+          <input
+            type="checkbox"
+            #price
+            name="Price"
+            id="{{ i.name }}"
+            value="{{ i.name }}"
+            (change)="onChangePrice($event)"
+          />{{ i.name }}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="card" *ngFor="let i of productByCategory">
+    <img
+      class="card-img-top"
+      [src]="showImage(i.avatar_image)"
+      width="120"
+      height="150"
+      alt="Card image cap"
+      (click)="routeToProductDetails(i.title, i.id)"
+    />
+    <div class="card-body">
+      <h5 class="grocery-name">{{ i.title }}</h5>
+      <span>☆☆☆☆☆(4)</span>
+      <div class="content">
+        <span >{{i?.amount - i?.discount_amount | currency: 'INR'}} &nbsp;<span class="original-price"
+                [style.text-decoration]="i.discount_amount ? 'line-through' : 'none'">
+        {{ i.amount }}
+        </span></span>
+        <a class="btn" (click)="addProductToCart(i)"
+          ><i class="fas fa-cart-arrow-down"></i>Add</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="container d-flex justify-content-center" *ngIf="!productByCategory.length">
+  <h1>No Products Found!</h1>
+</div> -->
+<app-additional-info></app-additional-info>
+  

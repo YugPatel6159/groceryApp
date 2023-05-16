@@ -1,0 +1,47 @@
+.d-flex{
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.search-input{
+    width:319px ;
+}
+.searchPart{
+    width: 455px;
+    height: 42px;
+}
+.categoriesPart{
+    width: 162px;
+}
+.searchBtn{
+    width: 55px;
+    height: 42px;
+    background-color: #3BB77E;
+    color: white;
+    border-radius: 0;
+}
+
+.cartNumber{
+position: relative;
+left: -10px;
+top: -9px;
+background-color: #3BB77E;
+border-radius: 50%;
+}
+.main{
+    margin-top: 2rem;
+    position: relative;
+        top: 0;
+}
+.border-none{
+    border: none;
+}
+.green-color{
+    color: #3BB77E;
+}
+.cart{
+    text-decoration: none;
+    color:black;
+}

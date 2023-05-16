@@ -1,0 +1,53 @@
+<div class="container"> 
+<div class="category-header">
+    <h2>{{urlGroceryName}}</h2>
+</div>
+<div class="container w-75 mt-3">
+    <span class="">
+        {{urlCategory}} > {{urlGroceryName}}
+    </span>
+    <div class="row">
+        <div class="col-md-6 mt-5">
+            <img class="border w-100" [src]='"http://localhost:8080/api/v1/get-image/" + matchedProduct.avatar_image' alt="">
+        </div>
+        <div class="col-md-5 mt-5 ">
+            <div class="d-flex product-name">
+                <h3>{{matchedProduct.title}}</h3>
+                <i class="fa-regular fa-heart fa-2xl mt-3 heart" (click)="likedProductUserWise(matchedProduct)"></i>
+            </div>
+            <div>
+                <span>{{matchedProduct.quantity}}</span>
+            </div>
+            <div class="mt-3 d-flex product-name">
+                <span>{{matchedProduct.description}}</span>
+                <span>☆☆☆☆☆</span>
+            </div>
+            <div class="d-flex product-name mt-5">
+                <div class="col-md-6 ">
+                    <span ><i class="fa-solid fa-minus" (click)="minus()"></i></span>
+                    <span class="quantity"><input type="text" id="number" class="number" name="number" value="{{quantityCount}}" disabled></span>
+                    <span class="quantity"><i class="fa-solid fa-plus" (click)="plus()"></i></span>
+                </div>
+                <span >{{price | currency: 'INR'}} &nbsp;<span class="original-price"
+                    [style.text-decoration]="matchedProduct.discount_amount ? 'line-through' : 'none'">
+            {{ matchedProduct?.amount | currency: 'INR' }}
+            </span></span>
+            </div>
+            <hr class="mt-5 ">
+            <div class="text-center">
+                <button class="btn btn-success w-75 mt-4" (click)="onAdd(matchedProduct)">Add to basket</button>
+            </div>
+        </div>
+    </div>
+    <hr class="mt-5">
+    <div>
+        <div class="mt-5">{{matchedProduct.short_description}}</div>
+    </div>
+    <div>
+        <div class="mt-4 color">{{matchedProduct.description}}</div>
+    </div>
+    
+</div>
+<hr class="mt-5">
+
+</div>

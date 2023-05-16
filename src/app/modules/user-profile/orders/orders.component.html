@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="horizontal">
+        <hr class="divider">
+        <span class="text">Past Orders</span>
+        <hr class="divider">
+    </div>
+  <table class="table table-bordered ">
+    <tbody *ngFor="let i of orders;">
+      <tr>
+        <th scope="row" class="color"> <i class="fa fa-truck"></i></th>
+        <td>Delivered</td>
+        <td> {{i.order_date}}</td>
+        <td>Order Amount:{{i.sub_total | currency: 'INR' : 'INR'}}</td>
+        <td><button class="btn btn-secondary" (click)="moreDetails(i.id)">more Details</button></td>
+      </tr>
+    </tbody>
+  </table>

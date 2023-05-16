@@ -1,0 +1,24 @@
+.divider{
+    width: 434px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+  .horizontal{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  tr{
+    text-align: center;
+  }
+  /* .items{
+    border: none;
+  }
+  .row{
+    border: 1px black solid;
+    background-color: rgb(219, 218, 218);
+  } */
+  .color{
+    background-color: grey;
+    width: 40px;
+  }

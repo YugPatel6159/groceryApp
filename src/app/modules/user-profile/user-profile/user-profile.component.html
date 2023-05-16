@@ -1,0 +1,16 @@
+<div class="category-header mt-5">
+    <h2>Profile</h2>
+  </div>
+<div class=" container d-flex">
+    <div class="sidebar me-5">
+        <a routerLink="/profile">Profile</a>
+        <a routerLink="/profile/orders">Orders</a>
+        <a routerLink="/profile/wishlist">WishList</a>
+        <a routerLink="/profile/manage-Address">Manage Address</a>
+        <a routerLink="/profile/change-password">Change Password</a>
+        <a (click)="onLogout()" >Logout</a>
+    </div>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+</div>

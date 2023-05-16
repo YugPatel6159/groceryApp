@@ -1,0 +1,35 @@
+.exp-cat{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+.space{
+    margin-left: 10px;
+    color: black;
+}
+.width{
+    width: 10px;
+}
+
+.headings{
+    display: flex;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+    margin: 13px;
+    color: black;
+}
+.cat-card{
+margin-left: 25PX;
+height: 194px;
+border: 1px solid gray;
+width: 200px !important;
+text-align: center;
+cursor: pointer;
+}
+
+
+

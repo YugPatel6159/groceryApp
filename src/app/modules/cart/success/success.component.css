@@ -1,0 +1,15 @@
+.category-header{
+    text-align: center;
+    justify-content: center;
+    background-image:url("../../../../assets/Rectangle 1.png");
+    padding: 80px;
+    margin-top: 20px;
+}  
+.container{
+    display: flex;
+    flex-direction: column;
+}
+span{
+    display: flex;
+    justify-content: center;
+}

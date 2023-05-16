@@ -1,0 +1,17 @@
+.trend-exp{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.trend-card{
+    display: flex;
+    flex-direction: row;
+}
+
+.hr-width{
+    width:50px
+}
+.green{
+    color: #3BB77E;
+}
+

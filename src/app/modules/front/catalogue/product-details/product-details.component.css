@@ -1,0 +1,33 @@
+.category-header{
+    text-align: center;
+    justify-content: center;
+    background-image:url("../../../../../assets/Rectangle 1.png");
+    padding: 80px;
+    margin-top: 20px;
+}
+.product-name{
+    justify-content: space-between;
+}
+.fa-solid:hover{
+    transition: box-shadow .3s;
+    color: #3BB77E;
+}
+.number{
+    width:40px;
+    border-radius: 10px;
+    text-align: center;
+}
+.btn{
+    padding: 15px;
+    font-size: large;
+    border-radius: 29px;
+}
+.quantity{
+    margin-left: 10px;
+}
+.color{
+    color: rgb(170, 163, 163);
+}
+.heart{
+    color: red;
+}

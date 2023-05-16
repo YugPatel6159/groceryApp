@@ -1,0 +1,87 @@
+<form [formGroup]="addAddress" class="row container" (ngSubmit)="onSave()">
+    <div class="row">
+        <div class="col-md-4 mt-3 ms-5">
+            <div class="form-group">
+                <label for="firstName">Address 1</label>
+                <input class="form-control" type="text" [class.is-invalid]="address1?.invalid && address1?.touched" name="address1" formControlName="address1">
+            </div>
+        </div>
+        <div class="col-md-4 mt-3 ms-5">    
+                <div class="form-group">
+                    <label for="firstName">Address 2</label>
+                    <input class="form-control" [class.is-invalid]="address2?.invalid && address2?.touched" type="text" name="address2" formControlName="address2">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group mt-3">
+                    <button class="form-control btn btn-success" type="submit">Save</button>
+                </div>
+            </div>
+        </div>
+          <div class="row">
+            <div class="col-md-4 mt-3 ms-5">
+                <div class="form-group">
+                    <label for="area">Area</label>
+                    <input type="text" [class.is-invalid]="area?.invalid && area?.touched" class="form-control" name="area" formControlName='area'>
+                </div>
+            </div>
+            <div class="col-md-4 mt-3 ms-5 d-flex">
+                <div class="form-group">
+                    <label for="state">Select State</label>
+                    <select formControlName="state" #state class="form-select ms-5"(change)="selectedState(state)">
+                        <option name="selectState" value=""  selected>Select State</option>
+                        <option *ngFor="let i of states" value="{{i.name}}">{{i.name}}</option>
+                      </select>
+                </div>
+            </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-4 ms-5">
+                    <div class="form-group">
+                        <label for="city">select city</label>
+                        <select formControlName="city" class="form-select ms-5 " aria-label="Default select example">
+                            <option name="selectCity" value="" disabled selected>Select city</option>
+                            <option *ngFor="let j of cities" value="{{j}}">{{j}}</option>
+                          </select>
+                    </div>
+              </div>
+                <div class="col-md-4 ms-5 form-group">
+                    <label for="country">Country</label>
+                    <input type="text" class="form-control" [class.is-invalid]="country?.invalid && country?.touched" name="country" formControlName='country'>
+                </div>
+               
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-4 ms-5">
+                    <div class="form-group">
+                        <label for="postalCode">Postal Code</label>
+                        <input type="text" class="form-control" name="potalCode" [class.is-invalid]="postalCode?.invalid && postalCode?.touched" formControlName="postalCode">
+                        <div *ngIf="postalCode?.invalid && postalCode?.touched">
+                            <small class="text-danger" *ngIf="postalCode?.errors?.['required']">
+                                postal code is required
+                            </small>
+                            <small class="text-danger" *ngIf="postalCode?.errors?.['minlength']">
+                                postal code is of min 6 length
+                            </small>
+                            <small class="text-danger" *ngIf="postalCode?.errors?.['maxlength']">
+                                postal code is of max 6 length
+                            </small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ms-5">
+                    <div class="form-group">
+                        <label for="landMark">land Mark</label>
+                        <input class="form-control" type="landMark" name="landMark" [class.is-invalid]="landMark?.invalid && landMark?.touched" formControlName="landMark">
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-4 ms-5 ">
+                    <div class="form-group">
+                        <label for="tag">Tag</label>
+                        <input type="text" [class.is-invalid]="tag?.invalid && tag?.touched" class="form-control" name="tag" formControlName='tag'>
+                    </div>
+                </div>
+            </div>
+</form>

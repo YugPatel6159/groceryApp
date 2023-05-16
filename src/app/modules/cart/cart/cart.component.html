@@ -1,0 +1,97 @@
+
+<ngx-spinner>
+  <img src="../../../../assets/ZZ5H.gif" width="100px" height="100px" alt="">
+</ngx-spinner>
+<div class="category-header mt-5">
+  <h2>My Cart</h2>
+</div>
+<div class="container">
+  <table class="table">
+    <thead class=" thead table-dark">
+      <tr>
+        <th scope="col">ITEM DESCRIPTION</th>
+        <th scope="col">UNIT PRICE</th>
+        <th scope="col">QUANTITY</th>
+        <th scope="col">SUBTOTAL</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+  
+    <!-- <tr class="table-secondary" *ngIf="productByCategory[category].length != 0" >
+      <td  colspan="5" >
+        <div class="col-md-12 d-flex background"  >
+        <span>{{ category }}</span>
+        <span>{{ productByCategory[category].length }} items</span>
+        <span>{{ productByCategory[category].totalPrice |currency: 'INR' }} </span>
+      </div>
+    </td>
+    </tr> -->
+
+      <tr *ngFor="let product of matchedCustomerCart">
+        <td>
+          <div class="d-flex">
+            <div class="row m-0 p-0">
+              <img [src]="'http://localhost:8080/api/v1/get-image/' + product.imageUrl" alt="" width="100" height="100">
+            </div>
+            <div class="row m-0 p-0">
+              <b>{{ product.grocery_name || '' }}</b>
+            </div>
+          </div>
+        </td>
+        <td class=" align-items-center " >
+          <div class="row m-0 p-0">
+            <b><span class="green"
+              >{{ product.price - product.discPrice | currency: 'INR' }} &nbsp;</span
+            ></b>
+          </div>
+        </td>
+        <td>
+          <div>
+            <span
+            ><i class="fa-solid fa-minus" (click)="minus(product)"></i
+          ></span>
+          <input
+              type="text"
+              id="number"
+              class="number"
+              name="number"
+              value="{{ product.quantity }}"
+              disabled
+          />
+          <span class="quantity"
+          ><i class="fa-solid fa-plus" (click)="plus(product)"></i
+        ></span>  
+          </div>
+        </td>
+        <td>{{ product.quantity * (product.subtotal) | currency: 'INR' }}</td>
+        <td><i
+          class="fa-solid fa-xmark fa-xl"
+          (click)="removeProduct(product)"
+        ></i
+      ></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="container box">
+    <div class="d-flex justify-content-end size">
+      <div class="d-flex checkout">
+        <span>Sub Total:</span>
+        <span>Delivery Charges:</span>
+        <hr />
+        <span>TOTAL</span>
+      </div>
+      <div class="checkout">
+        <span>{{ finalSubTotal | currency: 'INR' }}</span>
+        <span>**</span>
+        <hr />
+        <span>{{ finalSubTotal | currency: 'INR' }}</span>
+      </div>
+    </div>
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-success" (click)="routeToCheckout()">
+        Checkout
+      </button>
+    </div>
+  
+
